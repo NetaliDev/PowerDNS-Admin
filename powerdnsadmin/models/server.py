@@ -71,8 +71,8 @@ class Server(object):
         try:
             jdata = utils.fetch_json(urljoin(
                 self.PDNS_STATS_URL, self.API_EXTENDED_URL +
-                '/servers/{}/search-data?object_type={}&q={}'.format(
-                    self.server_id, object_type, query)),
+                '/servers/{}/search-data?object_type={}&q={}&max={}'.format(
+                    self.server_id, object_type, query, Setting().get('max_global_search_results'))),
                                      headers=headers,
                                      timeout=int(
                                          Setting().get('pdns_api_timeout')),

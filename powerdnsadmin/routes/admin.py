@@ -1370,6 +1370,7 @@ def setting_basic():
         'login_ldap_first',
         'maintenance',
         'max_history_records',
+        'max_global_search_results',
         'otp_field_enabled',
         'otp_force',
         'pdns_api_timeout',
